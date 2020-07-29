@@ -5,21 +5,20 @@ This example shows how to send an email to respective audience with requested da
 
 ## Setup
 
-1. Go ahead and get started creating a blank workflow. If you need a refresher on how to get to this point, this [guide](https://docs.webmethods.io/workflow-building-blocks/creating-first-workflow) can be a great introduction. 
+1.  Go ahead and get started creating a blank workflow. If you need a refresher on how to get to this point, this [guide](https://docs.webmethods.io/integration/workflow_building_blocks/creating_first_workflow/#gsc.tab=0) can be a great introduction. 
 
-2.  Add the HTTP Request service in the canvas by drag and drop feature. This automatically connects with the start of the step.![AddHTTPRequest](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/adddropbox.PNG)
+2.  If you want the email to be sent periodically, you can do this by using polling triggers. In this example we will use Clock trigger and set an email to be send every week. Click on the small setting icon on start step and choose Clock trigger. Use the edit option to choose day and time and click Done. 
 
-3.  Click on the small settings icon on the HTTP Request service to select HTTP Method and add an URL. ![HTTPRequestAction](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/dropboxaction.PNG)
+2.  Add the HTTP Request service in the canvas by drag and drop feature. This automatically connects with the Clock trigger.
 
-4.  Add the Dropbox connection details to create the connection to dropbox. We can use the automatic default feature to connect where the webmethods.io picks up the connection details from browser cookies. You just need to sign into dropbox on the browser and webmethods.io does everything behind the scene![dropboxconnection](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/dropboxconnection.PNG)
-![DropboxConnection_Success](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/dropboxconnectionsuccess.PNG)
+3.  Click on the small settings icon on the HTTP Request service to select HTTP Method and to add an URL. 
 
-5. Now map the source file to download from dropbox.![SourcefileMapping](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/sourcefilemapping.PNG)
+4.  To create custom HTML email template use Node.js service and add it in the canvas by drag and drop feature. Connect it to HTTP Request service.
 
-6.  We have a cool feature which is sending email where you can send the content to respective audience. Search for "send an email" and drag and drop the "Send an Email" service to canvas.![AddSendEmail](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/addsendemail.PNG)
+4.  We have a cool feature which is sending email where you can send the content to respective audience. Search for "send an email" and drag and drop the "Send an Email" service to canvas.
 
-7.  Map the required fields in the Send an Email service. In the below example we have mapped the to address, subject and body![SendEmailMapping](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/sendemailmapping.PNG)
+5.  Map the required fields in the Send an Email service. In this example we have mapped the address, subject and body.
 
-8. This completes the workflow and connects to stop step. We can test this from the UI to review the results in action tab. ![testingui](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/testingui.PNG)
+6.  This completes the workflow and connects to stop step 
 
-9. Check the email to review the results of the workflow![Testing](https://github.com/maam1/webmethodsio-examples/blob/master/dropbox-sendemail/testing.PNG)
+7.  Check the email to review the results of the workflow.
