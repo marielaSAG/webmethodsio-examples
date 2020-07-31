@@ -1,5 +1,5 @@
 
-# Use GET HTTP Method to request data from a specified resource and send an email with it
+# Use GET HTTP Method to request data from a specified resource and send an email with the content
 
 This example shows how to send an email to respective audience with requested data from a specified resource.
 
@@ -11,7 +11,7 @@ This example shows how to send an email to respective audience with requested da
 
 3.  Add the HTTP Request service in the canvas by drag and drop feature. This automatically connects with the Clock trigger. [ConnectHTTPRequest](https://github.com/marielaSAG/webmethodsio-examples/blob/master/httprequest-sendemail/ConnectHTTPRequest.png)
 
-4.  Click on the small settings icon on the HTTP Request service to select HTTP Method and to add an URL. [HTTPRequest](https://github.com/marielaSAG/webmethodsio-examples/blob/master/httprequest-sendemail/HTTPRequest.png)
+4.  Click on the small settings icon on the HTTP Request service to select HTTP Method and add an URL. [HTTPRequest](https://github.com/marielaSAG/webmethodsio-examples/blob/master/httprequest-sendemail/HTTPRequest.png)
 
 5.  To create custom HTML email template use Node.js service and add it in the canvas by drag and drop feature. Connect it to HTTP Request service. [AddNode.js](https://github.com/marielaSAG/webmethodsio-examples/blob/master/httprequest-sendemail/Nodejs.png) and [ConnectNode.js](https://github.com/marielaSAG/webmethodsio-examples/blob/master/httprequest-sendemail/AddHTML.png)
 
